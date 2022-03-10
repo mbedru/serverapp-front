@@ -10,12 +10,14 @@ import { Server } from './interface/server';
 import { NotificationService } from './service/notification.service';
 import { ServerService } from './service/server.service';
 
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit { //if u impl OnInit must define/implement ngOnInit
+  faCoffee = faCoffee;//fontawesome
   appState$: Observable<AppState<CustomResponse>>  //we said we will capture entire State of the application
   readonly DataState = DataState;
   readonly Status = Status;
